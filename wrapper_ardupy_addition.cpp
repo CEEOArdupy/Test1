@@ -11,7 +11,7 @@ extern "C"{
 void * operator new(size_t, void *);
 
 extern "C" {
-    void common_hal_add_construct(abstract_module_t *self){
+    bool common_hal_add_construct(abstract_module_t *self){
         self->module = new (m_new_obj(add)) add();
         add.init();
     }
