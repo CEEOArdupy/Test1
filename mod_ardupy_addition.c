@@ -21,8 +21,8 @@ m_generic_make(add) {
 
 float add_sum(size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args){
     abstract_module_t * self = (abstract_module_t *)(pos_args[0]);
-    float a = mp_obj_get_int(pos_args[1]);
-    float b = mp_obj_get_int(pos_args[2]);
+    float a = mp_obj_get_float(pos_args[1]);
+    float b = mp_obj_get_float(pos_args[2]);
     float r = common_hal_add_sum(self, a, b);
     
     return r;
