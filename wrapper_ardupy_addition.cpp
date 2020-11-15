@@ -21,7 +21,7 @@ extern "C"{
         adder.~add();
     }
 
-    uint32 common_hal_add_sum(abstract_module_t *self, uint32 a , uint32 b){
+    uint common_hal_add_sum(abstract_module_t *self, uint a , uint b){
         return adder.sum(a,b);
    
     }
