@@ -41,10 +41,9 @@ MP_DEFINE_CONST_DICT(add_locals_dict, add_locals_dict_table);
 
 const mp_obj_type_t add_type = {
     {&mp_type_type},
-    .name = MP_QSTR_milan_add,
+    .name = MP_QSTR__add,
     .make_new = add_make_new,
     .locals_dict = (mp_obj_t)&add_locals_dict,
-    .attr = add_obj_attr,
 };
 
 
