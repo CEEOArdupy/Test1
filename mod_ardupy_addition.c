@@ -6,9 +6,9 @@
 #include "shared-bindings/util.h"
 
 
-void common_hal_add_construct(abstract_module_t *self)
-void common_hal_add_deinit(abstract_module_t *self)
-float common_hal_add_sum(abstract_module_t *self, int a , int b)
+void common_hal_add_construct(abstract_module_t *self, int count);
+void common_hal_add_deinit(abstract_module_t *self);
+float common_hal_add_sum(abstract_module_t *self, int a , int b);
 
 m_generic_make(add) {
     abstract_module_t * self = new_abstruct_module(type);
