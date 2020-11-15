@@ -21,7 +21,7 @@ extern "C"{
         adder.~add();
     }
 
-    float common_hal_add_sum(abstract_module_t *self, int a , int b){
+    int common_hal_add_sum(abstract_module_t *self, int a , int b){
         return adder.sum(a,b);
    
     }
