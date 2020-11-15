@@ -25,4 +25,9 @@ extern "C"{
         return adder.sum(a,b);
    
     }
+    
+     float common_hal_add_ten(abstract_module_t *self){
+        return adder.ten();
+   
+    }
 }
