@@ -8,7 +8,7 @@
 
 void common_hal_add_construct(abstract_module_t *self);
 void common_hal_add_deinit(abstract_module_t *self);
-uint32_t common_hal_add_sum(abstract_module_t *self, uint32_t a , uint32_t b);
+int32_t common_hal_add_sum(abstract_module_t *self, int32_t a , int32_t b);
 
 m_generic_make(add) {
     abstract_module_t * self = new_abstruct_module(type);
@@ -19,11 +19,11 @@ m_generic_make(add) {
 
 
 
-uint32_t add_sum(size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args){
+int32_t add_sum(size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args){
     abstract_module_t * self = (abstract_module_t *)(pos_args[0]);
-    uint32_t a = mp_obj_get_int(pos_args[1]);
-    uint32_t b = mp_obj_get_int(pos_args[2]);
-    uint32_t r = common_hal_add_sum(self, a, b);
+    int32_t a = mp_obj_get_int(pos_args[1]);
+    int32_t b = mp_obj_get_int(pos_args[2]);
+    int32_t r = common_hal_add_sum(self, a, b);
     return r;
 }
  
