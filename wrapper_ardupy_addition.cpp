@@ -7,7 +7,7 @@ extern "C"{
 #include "shared-bindings/util.h"
 }
 
-#define add (*(add*)self->module) //class name is add
+#define add (*(add *)self->module) //class name is add
 void * operator new(size_t, void *);
 
 extern "C" {
