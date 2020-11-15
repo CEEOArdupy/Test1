@@ -19,21 +19,6 @@ m_generic_make(add) {
 
 
 
-void add_obj_attr(mp_obj_t self_in, qstr attr, mp_obj_t *dest){
-    abstract_module_t *self = (abstract_module_t *)self_in;
-    uint32_t value;
-    float number;
-    if (dest[0] == MP_OBJ_NULL) {
-        if (attr == MP_QSTR_sum) {
-            number = common_hal_add_sum(self, a,b); // Call previously defined unction
-            dest[0] = mp_obj_new_float(number); // This the MicroPython float type, should match with the data type
-            return;
-        }
-        
-    }
-    generic_method_lookup(self_in, attr, dest);
-}
-
 mp_obj_t sum(size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args){
     abstract_module_t * self = (abstract_module_t *)(pos_args[0]);
     int a = mp_obj_get_int(pos_args[1]);
