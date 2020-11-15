@@ -23,7 +23,7 @@ void add_obj_attr(mp_obj_t self_in, qstr attr, mp_obj_t *dest){
     float number;
     if (dest[0] == MP_OBJ_NULL) {
         if (attr == MP_QSTR_sum) {
-            number = common_hal_sum(self); // Call previously defined unction
+            number = common_hal_add_sum(self); // Call previously defined unction
             dest[0] = mp_obj_new_float(number); // This the MicroPython float type, should match with the data type
             return;
         }
