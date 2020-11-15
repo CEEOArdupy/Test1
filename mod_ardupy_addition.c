@@ -41,7 +41,7 @@ const mp_rom_map_elem_t add_locals_dict_table[] = {
  
 MP_DEFINE_CONST_DICT(add_locals_dict, add_locals_dict_table);
 
-const mp_obj_type_t milan_add_type = {
+const mp_obj_type_t add_type = {
     {&mp_type_type},
     .name = MP_QSTR_milan_add,
     .make_new = add_make_new,
