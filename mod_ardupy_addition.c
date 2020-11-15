@@ -13,7 +13,7 @@ float common_hal_add_sum(abstract_module_t *self, int a , int b);
 m_generic_make(add) {
     abstract_module_t * self = new_abstruct_module(type);
     mp_arg_check_num(n_args, n_kw, 0, 0, false);
-    common_hal_add_construct(self);
+    common_hal_add_construct(self, int count);
     return self;
 }
 
