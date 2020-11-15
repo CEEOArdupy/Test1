@@ -12,10 +12,11 @@ extern "C"{
 void * operator new(size_t, void *);
 
 extern "C"{
-    void common_hal_add_construct(abstract_module_t *self, int count){
-        self->module = new (m_new_obj(add)) add(count);
+    void common_hal_add_construct(abstract_module_t *self){
+        self->module = new (m_new_obj(add)) add();
 
     }
+
    void common_hal_add_deinit(abstract_module_t *self){
         adder.~add();
     }
