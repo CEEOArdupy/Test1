@@ -1,12 +1,12 @@
 {
-    "name": "Seeed ArduPy Ultrasonic Sensor ",
+    "name": "Milan Test 1",
     "version": "1.0.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Seeed-Studio/seeed-ardupy-ultrasonic-sensor.git"
+        "url": "https://github.com/CEEOArdupy/Test1.git"
     },
     "dependencies": [{
-        "name": "Seeed_Arduino_UltrasonicSensor",
-        "url": "https://github.com/Seeed-Studio/Grove_Ultrasonic_Ranger.git"
+        "name": "addition",
+        "url": "https://github.com/CEEOArdupy/Add.git"
     }]
 }
