@@ -7,19 +7,20 @@ extern "C"{
 #include "shared-bindings/util.h"
 }
 
-#define add (*(add *)self->module) //class name is add
+#define adder (*(add *)self->module)
+
 void * operator new(size_t, void *);
 
 extern "C" {
-    bool common_hal_add_construct(abstract_module_t *self){
+    void common_hal_add_construct(abstract_module_t *self){
         self->module = new (m_new_obj(add)) add();
-        add.init();
+        adder.init();
     }
    void common_hal_add_deinit(abstract_module_t *self){
-        add.~add();
+        adder.~add();
     }
     float common_hal_add_sum(abstract_module_t *self, int a , int b){
-        return add.sum(a,b);
+        return adder.sum(a,b);
    
     }
 }
