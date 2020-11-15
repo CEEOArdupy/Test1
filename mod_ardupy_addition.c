@@ -13,7 +13,7 @@ float common_hal_add_sum(abstract_module_t *self, int a , int b);
 m_generic_make(add) {
     abstract_module_t * self = new_abstruct_module(type);
     mp_arg_check_num(n_args, n_kw, 0, 0, false);
-    common_hal_add_construct(self, int count);
+    common_hal_add_construct(self, count);
     return self;
 }
 
@@ -23,7 +23,7 @@ void add_obj_attr(mp_obj_t self_in, qstr attr, mp_obj_t *dest){
     float number;
     if (dest[0] == MP_OBJ_NULL) {
         if (attr == MP_QSTR_sum) {
-            number = common_hal_add_sum(self); // Call previously defined unction
+            number = common_hal_add_sum(self, a,b); // Call previously defined unction
             dest[0] = mp_obj_new_float(number); // This the MicroPython float type, should match with the data type
             return;
         }
