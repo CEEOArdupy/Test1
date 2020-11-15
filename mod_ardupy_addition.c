@@ -25,7 +25,7 @@ float add_sum(size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args){
     float b = mp_obj_get_float(pos_args[2]);
     float r = common_hal_add_sum(self, a, b);
     
-    return r;
+    return mp_obj_get_float(r);
 }
  
 MP_DEFINE_CONST_FUN_OBJ_KW(add_sum_obj, 2, add_sum);
