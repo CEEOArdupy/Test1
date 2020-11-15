@@ -7,31 +7,27 @@ extern "C"{
 #include "shared-bindings/util.h"
 }
 
-#define testaddition (*(Add *)self->module)
+#define adder (*(add *)self->module)
 
 void * operator new(size_t, void *);
 
 extern "C"{
-    void common_hal_testaddition_construct(abstract_module_t *self){
-        self->module = new (m_new_obj(Add)) Add();
+    void common_hal_add_construct(abstract_module_t *self){
+        self->module = new (m_new_obj(add)) add();
 
     }
 
-   void common_hal_testaddition_deinit(abstract_module_t *self){
-        testaddition.~Add();
+   void common_hal_add_deinit(abstract_module_t *self){
+        adder.~add();
     }
 
-    int common_hal_testaddition_sum(abstract_module_t *self, int a , int b){
-        return testaddition.sum(a,b);
+    float common_hal_add_sum(abstract_module_t *self, float a , float b){
+        return adder.sum(a,b);
    
     }
     
-    int common_hal_testaddition_ten(abstract_module_t *self){
-        return testaddition.ten();
+     float common_hal_add_ten(abstract_module_t *self){
+        return adder.ten();
    
-    }
-
-     int common_hal_testaddition_past(abstract_module_t *self ,  int a ){
-        return testaddition.past(a);
     }
 }
