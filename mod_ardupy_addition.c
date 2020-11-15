@@ -23,7 +23,7 @@ mp_obj_t sum(size_t n_args, const mp_obj_t *pos_args, mp_map_t *kw_args){
     abstract_module_t * self = (abstract_module_t *)(pos_args[0]);
     int a = mp_obj_get_int(pos_args[1]);
     int b = mp_obj_get_int(pos_args[2]);
-    mp_obj_t r = common_hal_add_sum(self, a, b);
+    float r = common_hal_add_sum(self, a, b);
     return r;
 }
  
